@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron">
+        <div class="container">
+            <h1 class="display-3">Time to Hit the Slopes!</h1>
+            <p class="lead">"Best Ski Resorts to Visit This Week"</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Zipcode" id="zip" aria-label="Zipcode" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="search">Search</button>
+                    </div>
+                    <br>
+                    
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                        <option selected>Choose...</option>
+                        <option value="1">Snow Depth</option>
+                        <option value="2">Miles Away</option>
+                        <option value="3">Duration</option>
+                    </select>
+                    <div class="input-group-append">
+                        <label class="input-group-text" for="inputGroupSelect02">Sort by</label>
+                    </div>
+                </div>
+            </div>
+            <span class="row" id="zipValidate"></span>
+        </div>
+    </div>
+    <div id=resultsData></div>
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script> -->
+    <script src="asset/js/project1.js"></script>
+    <script></script>
+</body>
+
+</html>
