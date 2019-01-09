@@ -1,21 +1,16 @@
 $(document).ready(function () {
     console.log("ready!");
-    
-    $("#search").on("click", function (event) {
-        event.preventDefault();
 
-        var userZip = $("#zip").val().trim();
-    //    // $("#zip").validate({
-    //         rules: {
-    //             Zip: {zipCodeValidation: true} // hook in custom zip code validation
-    //         }
-    //     });
-        
-    //     $.validator.addMethod("zipCodeValidation", function() {
-    //         var zipCode = $('#zip').val();
-    //         return (/(^\d{5}$)/).test(zipCode); // returns boolean
-    //     }, "Please enter a valid US zip code.");
-    //     // if (userZip == /^\d{5}$/) {
+    $("#zipForm").validate({
+        rules: {
+            zip: { zipCodeValidation: true } 
+        },
+        submitHandler: function () {
+            console.log("valid form!");
+
+            var userZip = $("#zip").val().trim();
+            $("#zip").val("");
+            $("#resultsData").empty();
 
             $.ajax({
                 url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + userZip + "&key=AIzaSyCtACpMRAILtspcD0Xv5L3SADKump8sbJk",
@@ -95,19 +90,29 @@ $(document).ready(function () {
                                 resort.append(cardBody);
 
                                 $("#resultsData").append(resort);
-                            })
+                            });
                         })(i);
-
-                    };
-
-
+                    }
                 });
             });
-
-        //} else {
-           // $("#zipValidate").text("Please enter valid zipcode")
-        //}
+        },
+        invalidHandler: function () {
+            console.log("invalid form!");
+            $("#resultsData").empty();
+            $("#zip").val("");
+        }
     });
+
+    $.validator.addMethod("zipCodeValidation", function () {
+        var zipCode = $('#zip').val();
+        return (/(^\d{5}$)/).test(zipCode); 
+    }, "Please enter a valid US zip code.");
+
+    $("#search").on("click", function (event) {
+        var form = $("#zipForm");
+        form.validate();
+    });
+
 
 });
 

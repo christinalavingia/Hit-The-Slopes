@@ -8,6 +8,14 @@ body{
     margin: 20px;
     text-align: center;
 }
+
+#zip-error{
+    color: red;
+    position: relative;
+    top: 50px;
+    left: -50px;
+}
+
 .form-control{
     color: rgb(8, 8, 51);
 }
@@ -31,7 +39,6 @@ body{
     font-size: 30px;
 }
 
-#zipValidate{
-    color: red;
-    margin-left: 20px;
+#search{
+    background-color: rgb(168, 168, 236);
 }
