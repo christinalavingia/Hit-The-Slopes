@@ -1,19 +1,24 @@
 body{
+    background-image: url("../images/mountain.jpg");
     background-color: aliceblue; 
-    color: rgb(8, 8, 51);
+    color: #080833;
 }
+
 .jumbotron{
     background-color: rgb(168, 168, 236);
     background-size: cover;
     margin: 20px;
     text-align: center;
+    opacity: 0.80;
 }
 
 #zip-error{
     color: red;
     position: relative;
-    top: 50px;
-    left: -50px;
+    font-size: 16px;
+    font-weight: bold;
+    top: 60px;
+    left: -40px;
 }
 
 .form-control{
@@ -22,6 +27,7 @@ body{
 #button-addon2{
     background-color: rgb(168, 168, 236);
     color: rgb(8, 8, 51);
+    opacity: 0.80;
 }
 .input-group-text{
     background-color: rgb(168, 168, 236);
@@ -33,6 +39,7 @@ body{
     margin-left: 15%;
     margin-right: 15%;
     margin-bottom: 10px;
+    opacity: 0.80;
 }
 
 #resorts{
@@ -41,4 +48,5 @@ body{
 
 #search{
     background-color: rgb(168, 168, 236);
+    opacity: 0.80%;
 }
