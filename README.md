@@ -1,7 +1,5 @@
 # Ski-Project
 
-# Ski-Project
-
 ## Live Project Link: https://char-dy.github.io/Ski-Project/
 
 ## Overview
